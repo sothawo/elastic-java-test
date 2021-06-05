@@ -17,6 +17,7 @@ repositories {
 dependencies {
     implementation 'co.elastic.clients:elasticsearch-java:8.0.0-SNAPSHOT'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    implementation 'org.eclipse:yasson:2.0.2'
     implementation 'org.elasticsearch.client:elasticsearch-rest-client:7.12.1'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'

@@ -9,6 +9,7 @@ import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import co.elastic.clients.elasticsearch._global.SearchResponse;
 import co.elastic.clients.elasticsearch._global.search.Hit;
 import co.elastic.clients.json.jackson.JacksonJsonpMapper;
+import co.elastic.clients.json.jsonb.JsonbJsonpMapper;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 
@@ -30,7 +31,10 @@ public class App {
             .build();
 
         // Create the transport that provides JSON and http services to API clients
-        Transport transport = new RestClientTransport(restClient, new JacksonJsonpMapper());
+        // Jackson crashes
+        // Transport transport = new RestClientTransport(restClient, new JacksonJsonpMapper());
+        // Yasson works
+        Transport transport = new RestClientTransport(restClient, new JsonbJsonpMapper());
 
         // And create our API client
         ElasticsearchClient client = new ElasticsearchClient(transport);
