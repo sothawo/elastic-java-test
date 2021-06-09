@@ -20,6 +20,10 @@ dependencies {
     implementation 'org.eclipse:yasson:2.0.2'
     implementation 'org.elasticsearch.client:elasticsearch-rest-client:7.12.1'
 
+    implementation 'org.springframework:spring-core:5.3.7'
+    implementation 'org.springframework:spring-webflux:5.3.7'
+    implementation 'io.projectreactor.netty:reactor-netty-http:1.0.7'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
